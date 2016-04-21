@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.xian.patientappv1.AppointmentActivity">
+
+    <include android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:id="@+id/spHospital"
+            >
+        </Spinner>
+        <TextView
+            android:id="@+id/tvHosAddress"
+            android:gravity="center"
+            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/spHospital"
+            android:maxLines="4"
+            android:lines="4"
+            android:text="Lorem ipsum dolor sit amet
+            consectetur adipisicing elit,
+            sed do eiusmod tempor
+            incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut"></TextView>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/aDescription"
+            android:layout_below="@+id/tvHosAddress">
+
+            <EditText android:id="@+id/input_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:lines="2"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/aDoctor"
+            android:layout_below="@+id/aDescription">
+
+            <EditText android:id="@+id/input_Doctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Doctor (optional)"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/aContact"
+            android:layout_below="@+id/aDoctor">
+
+            <EditText android:id="@+id/input_Contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Phone No."/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make Appointment"
+            android:layout_below="@id/aContact"
+            android:layout_marginTop="18dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
